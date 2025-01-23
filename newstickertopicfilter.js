@@ -1,7 +1,7 @@
 let terms = [
     "musk", "trump", "elon"
 ];
-let removePlusArticles = true;
+let removePlusArticles = false;
 
 const includesCaseInsensitive = (str, searchString) =>
     new RegExp(searchString, 'i').test(str);
@@ -15,10 +15,11 @@ function onGot(item) {
     if (item.terms) {
         termString = item.terms;
         terms = termString.split("|");
-        console.log("Newsticker Topic Filter terms: " + terms);
+        // console.log("Newsticker Topic Filter terms: " + terms);
     }
+    removePlusArticles = item.filterPlus || false;
     setTimeout(function(){
-        console.log("Newsticker Topic Filter starting...");
+        // console.log("Newsticker Topic Filter starting...");
         const articleList = document.querySelectorAll(".archive__list>li");
         articleList.forEach((articleListItem) => {
             const titleText = articleListItem.querySelector("span.a-article-teaser__title-text"); 
@@ -41,5 +42,5 @@ function onGot(item) {
     }, 1000);
 }
 
-const getting = browser.storage.sync.get("terms");
+const getting = browser.storage.sync.get(["terms", "filterPlus"]);
 getting.then(onGot, onError);
