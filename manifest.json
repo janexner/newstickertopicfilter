@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Topic filter for H**se Newsticker",
+    "version": "1.0",
+  
+    "description": "Allows you to list topics you do not want to see. Articles with those topics will be removed.",
+  
+    "icons": {
+      "48": "icons/logo-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.heise.de/newsticker/"],
+        "js": ["newstickertopicfilter.js"]
+      }
+    ],
+
+    "options_ui": {
+    "page": "settings.html"
+  },
+
+  "permissions": ["storage"],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "jan@exner.com"
+    }
+  }
+}
