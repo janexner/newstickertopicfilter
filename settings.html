@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
     <head>
         <meta charset="utf-8" />
     </head>
@@ -7,14 +7,16 @@
     <body>
         <form>
         <h2>Filterbegriffe</h2>
-        <p>Mehrere Begriffe können mit "|" getrennt werden, z.B. "Regen|Schnee|Gewitter".</p>
-        <input type="text" id="terms" name="terms" />
-        <h2>Weitere Optionen</h2>
         <div>
+            <p>Mehrere Begriffe können mit "|" getrennt werden, z.B. "Regen|Schnee|Gewitter".</p>
+            <input type="text" id="terms" name="terms" />
+        </div>
+        <h2>Weitere Optionen</h2>
+        <div style="margin-bottom: 2em;">
             <input type="checkbox" id="plusFiltern" name="plusFiltern" checked />
             <label for="plusFiltern">"Plus" Artikel filtern?</label>
         </div>
-        <button type="submit">Save</button>
+        <button type="submit">Speichern</button>
         </form>
 
         <script src="settings.js"></script>

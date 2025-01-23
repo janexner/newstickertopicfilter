@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
-    "name": "Topic filter for H**se Newsticker",
+    "name": "Filter für den H**se Newsticker",
     "version": "1.0",
   
-    "description": "Allows you to list topics you do not want to see. Articles with those topics will be removed.",
+    "description": "Mit dem Filter kann man Schlagwörter filtern. Artikel, deren Titel einen der Begriffe enthält, werden nicht mehr angezeigt.",
   
     "icons": {
       "48": "icons/logo-48.png"
