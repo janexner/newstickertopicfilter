@@ -10,7 +10,7 @@ function saveOptions(e) {
 
 function restoreOptions() {
     function setCurrentChoice(result) {
-        document.querySelector("#terms").value = result.terms || "trump|musk|elon";
+        document.querySelector("#terms").value = result.terms || "regen|schnee|gewitter";
         document.querySelector("#plusFiltern").checked = result.checked || false;
     }
 

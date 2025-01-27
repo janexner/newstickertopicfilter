@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Filter für den H**se Newsticker",
-    "version": "1.0",
+    "version": "1.1",
   
     "description": "Mit dem Filter kann man Schlagwörter filtern. Artikel, deren Titel einen der Begriffe enthält, werden nicht mehr angezeigt.",
   

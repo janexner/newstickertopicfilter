@@ -1,5 +1,5 @@
 let terms = [
-    "musk", "trump", "elon"
+    "regen", "schnee", "gewitter"
 ];
 let removePlusArticles = false;
 
@@ -11,7 +11,7 @@ function onError(error) {
 }
   
 function onGot(item) {
-    let termString = "trump";
+    let termString = "regen";
     if (item.terms) {
         termString = item.terms;
         terms = termString.split("|");
@@ -33,6 +33,11 @@ function onGot(item) {
             }
             if(removePlusArticles) {
                 const plusIcon = articleListItem.querySelector("path.plus-icon-svg-path");
+                if(plusIcon) {
+                    // console.log("Newsticker Topic Filter extension found a 'plus' article and removed it.");
+                    articleListItem.remove();
+                }
+                const plusLogo = articleListItem.querySelector(".heise-plus-logo");
                 if(plusIcon) {
                     // console.log("Newsticker Topic Filter extension found a 'plus' article and removed it.");
                     articleListItem.remove();
